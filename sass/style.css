@@ -5,8 +5,6 @@
 .presentation {
   background-color: #ffbf80;
   text-align: center;
-  padding: 20px;
-  width: 100%;
 }
 
 .blocmaitrises {
@@ -24,4 +22,8 @@ body {
 
 .footer {
   height: 100px;
+}
+
+.footer p {
+  font-size: small;
 }/*# sourceMappingURL=style.css.map */
