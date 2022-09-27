@@ -1,0 +1,27 @@
+/*.navbarModif {
+    background-color: $grisFonce;
+
+}*/
+.presentation {
+  background-color: #ffbf80;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.blocmaitrises {
+  background-color: bisque;
+}
+
+.progress {
+  width: 40%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  height: 100px;
+}/*# sourceMappingURL=style.css.map */
