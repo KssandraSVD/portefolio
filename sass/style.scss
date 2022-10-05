@@ -1,7 +1,9 @@
-@import "../sass/utils/_variables";
+@import "./base/_typographie";
+@import "./base/_iframe";
 
-@import "../sass/layout/_navbar";
+
 @import "../sass/layout/_bloc";
 @import "../sass/layout/_progress";
 @import "../sass/layout/_body";
 @import "../sass/layout/_footer";
+@import "../sass/layout/_bouton";
