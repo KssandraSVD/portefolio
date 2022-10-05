@@ -13,7 +13,6 @@ iframe {
 
 .services {
   background-color: #cfcec9;
-  width: 100%;
 }
 
 .progress {
@@ -22,7 +21,7 @@ iframe {
 
 body, html {
   height: 100%;
-  width: 97%;
+  width: 100%;
 }
 
 .footer {
