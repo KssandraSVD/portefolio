@@ -1,7 +1,7 @@
 iframe {
   position: fixed;
   height: 60px;
-  width: 95%;
+  width: 97%;
 }
 
 .presentation {
@@ -13,15 +13,16 @@ iframe {
 
 .services {
   background-color: #cfcec9;
+  width: 100%;
 }
 
 .progress {
   width: 40%;
 }
 
-body {
+body, html {
   height: 100%;
-  width: 95%;
+  width: 97%;
 }
 
 .footer {
