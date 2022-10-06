@@ -49,6 +49,10 @@ body, html {
 .bouton {
   background-color: #bbb14e;
 }
+.bouton:hover {
+  background-color: #bbb14e;
+  opacity: 0.5;
+}
 
 .bouton1 {
   height: 40px;
