@@ -87,10 +87,10 @@
 
     <!--réalisations-->
 
-    
+    <h2 class="mt-5 mb-5 fs-5">Réalisations</h2>
 
-    <div class="row services mt-5">
-      <h2 class="mt-5 mb-5 fs-5">Réalisations</h2>
+    <div class="row  realisation mt-5">
+     
       <div class="card m-4 col-10 col-lg-4">
         <img class="card-img-top p-2" src="/Images/realisations_snack.jpg" alt="Card image">
         <div class="card-body">
@@ -112,38 +112,41 @@
 
         <!--CONTACT-->
 
-        <section id="contact">
-            <div class="container">
-              
-            
-                <h2 class="mt-3 mb-3 text-center  fs-5">Vous avez un projet en tête ?</h2>
-              
+        
+            <div class="row mb-5">
+                <h2 class="mb-5 mt-5 text-center fs-5">Vous avez un projet en tête ?</h2>
+
+              <div class="col-lg-5 mb-3">
                 <img class="img-fluid" src="./Images/coffee.jpg">
+              </div>
 
-              
-              <div class="row">
-                <div class="col">
-                    <form id="contact-form" action="" method="post">
-                        <div class="mb-3 mt-3">
-
-                          <label for="email" class="form-label">E-mail</label>
-                          <input name="email" type="email" required class="form-control" id="email" value="">
-                          <p class="comments"></p>
-                        </div>
-                    
-                        <div class="mb-3 form-label">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea name="message" required class="form-control" id="message" rows="3" ></textarea>
-                            <p class="comments"></p>
-                        </div>
-                        <button type="submit" class="btn bouton">Envoyer</button>
-                        
-                      </form>   
+              <div class="col">
+                <form>
+                  <div class="form-group">
+                    <label for="Email">Email</label>
+                    <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email">
                   </div>
-              </div>    
-            </div>
-        </section> 
-      </div>
+
+                  <div class="form-group col-lg-5">
+                    <label for="Nom">Nom</label>
+                    <input type="text" class="form-control" id="Nom" placeholder="Nom">
+                  </div>
+
+                  <div class="form-group col-lg-5">
+                    <label for="Prenom">Prénom</label>
+                    <input type="text" class="form-control" id="Prenom" placeholder="Prénom">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="textarea">Message</label>
+                    <input type="textarea" class="form-control" id="textarea" placeholder="Message">
+                  </div>
+
+                  <button type="submit" class="btn bouton mt-3">Soumettre</button>
+                </form>
+              </div>
+            </div> 
+            
 
       <!--FOOTER-->
       <div class="container">
@@ -153,12 +156,12 @@
 
           <div class="col text-center">
             <i class="fa-solid fa-phone m-1"></i>
-            <p>07.85.80.01.20</p>
+            <a href="tel:+33785800120" class="btn bouton mb-3">07.85.80.01.20</a>
           </div>
 
           <div class="col text-center">
             <i class="fa-solid fa-envelope m-1"></i>
-            <p>cassandra.sciauvaud@hotmail.fr</p>
+            <a href="mailto:cassandra.sciauvaud@hotmail.fr" class="btn bouton">cassandra.sciauvaud@hotmail.fr</a>
           </div>
         </div>
       </div>

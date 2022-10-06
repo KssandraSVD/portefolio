@@ -1,7 +1,7 @@
 iframe {
   position: fixed;
   height: 60px;
-  width: 97%;
+  width: 100%;
 }
 
 .presentation {
@@ -12,6 +12,20 @@ iframe {
 }
 
 .services {
+  background-color: #cfcec9;
+  -webkit-animation-name: animArrivee;
+          animation-name: animArrivee;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.realisation {
   background-color: #cfcec9;
 }
 
@@ -41,4 +55,34 @@ body, html {
 }
 .bouton1:hover {
   background-color: white;
+}
+
+@-webkit-keyframes animArrivee {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animArrivee {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=style.css.map */
