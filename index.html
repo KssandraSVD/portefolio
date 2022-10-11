@@ -10,9 +10,18 @@
 
     <title>Sciauvaud Cassandra Portfolio</title>
 
-    <!--lien jquery-->
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H9W0PK9GSS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H9W0PK9GSS');
+</script>
+
+    <!--LIEN JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
     <!--LIEN BOOSTRAP-->
 
@@ -24,8 +33,10 @@
     <!--LIEN FONT AWESOME-->
     <script src="https://kit.fontawesome.com/cb7db76cf2.js" crossorigin="anonymous"></script>
 
-    <!--lien scipt-->
-    <script src="./js/script.js"></script>
+    <!--LIEN JAVASCRIPT-->
+    <script src="js/script.js"></script>
+
+   
 
    
 </head>
@@ -116,47 +127,47 @@
 
     </div>
 
+    <!--CONTACT-->
 
-        <!--CONTACT-->
+            
+    <div class="row mb-5">
+        <h2 class="mb-5 mt-5 text-center fs-5">Vous avez un projet en tête ?</h2>
 
-        
-            <div class="row mb-5">
-                <h2 class="mb-5 mt-5 text-center fs-5">Vous avez un projet en tête ?</h2>
+      <div class="col-10 m-auto col-lg-5 mb-lg-3">
+        <img class="img-fluid" src="./Images/coffee.jpg">
+      </div>
 
-              <div class="col-10 m-auto col-lg-5 mb-lg-3">
-                <img class="img-fluid" src="./Images/coffee.jpg">
-              </div>
+      <div class="col m-5">
+        <form id="contact-form" method="post" role="form">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+            <p class="comments"></p>
+          </div>
 
-              <div class="col m-5">
-                <form id="contact-form" method="post" action="">
-                  <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-                    <p class="comments"></p>
-                  </div>
+          <div class="form-group col-lg-5">
+            <label for="nom">Nom</label>
+            <input type="text" name="nom" class="form-control" id="nom" placeholder="nom">
+            <p class="comments"></p>
+          </div>
 
-                  <div class="form-group col-lg-5">
-                    <label for="nom">Nom</label>
-                    <input type="text" class="form-control" id="nom" placeholder="nom">
-                    <p class="comments"></p>
-                  </div>
+          <div class="form-group col-lg-5">
+            <label for="prenom">Prénom</label>
+            <input type="text" name="prenom" class="form-control" id="prenom" placeholder="prénom">
+            <p class="comments"></p>
+          </div>
 
-                  <div class="form-group col-lg-5">
-                    <label for="prenom">Prénom</label>
-                    <input type="text" class="form-control" id="prenom" placeholder="prénom">
-                    <p class="comments"></p>
-                  </div>
+          <div class="form-group">
+            <label for="textarea">Message</label>
+            <input type="textarea" name="Message" class="form-control" id="message" placeholder="message">
+            <p class="comments"></p>
+          </div>
 
-                  <div class="form-group">
-                    <label for="textarea">Message</label>
-                    <input type="textarea" class="form-control" id="message" placeholder="message">
-                    <p class="comments"></p>
-                  </div>
-
-                  <button type="submit" class="btn bouton mt-3">Soumettre</button>
-                </form>
-              </div>
-            </div> 
+          <button type="submit" class="btn bouton mt-3">Soumettre</button>
+        </form>
+      </div>
+    </div> 
+       
             
 
       <!--FOOTER-->

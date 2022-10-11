@@ -1,30 +1,28 @@
 $(function () {
-
-    $('#contact-form').submit(function(e){
+    
+    $('#contact-form').submit(function(e) {
         e.preventDefault();
         $('.comments').empty();
         var postdata = $('#contact-form').serialize();
-
+        
         $.ajax({
-            type: 'post',
+            type: 'POST',
             url: 'php/contact.php',
             data: postdata,
             dataType: 'json',
-            succes: function(result) {
-
-                if(result.isSucces)
-                {
-                    $("#contact-form").append("<p class='merci'>Votre message a bien été envoyé. Merci de m'avoir contacté</p>");
-                    $("#contact-form")[0].reset();
-                }
-                else
-                {
-                    $("#email + .comments").html(result.emailError);
-                    $("#prenom + .comments").html(result.prenomError);
-                    $("#nom + .comments").html(result.nomError);
-                    $("#message + .comments").html(result.messageError);
-                }
+            success: function(json) {
+                 
+                if(json.isSuccess) {
+                    $('#contact-form').append("<p class='thank-you'>Votre message a bien été envoyé. Merci de m'avoir contacté :)</p>");
+                    $('#contact-form')[0].reset();
+                } else {
+                    $('#nom + .comments').html(json.firstnameError);
+                    $('#prenom + .comments').html(json.nameError);
+                    $('#email + .comments').html(json.emailError);
+                    $('#message + .comments').html(json.messageError);
+                }                
             }
         });
     });
+
 })

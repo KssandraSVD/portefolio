@@ -1,16 +1,29 @@
-<?php 
+<?php
 
-    $dbHost = "localhost";
-    $dbName = "";
-    $dbUser = "";
-    $dbUserPassword = "";
+class Database {
+
+    private static $dbHost = "localhost";
+    private static $dbName = "portfolio";
+    private static $dbUsername = "root";
+    private static $dbUserpassword = "root";
+    private static $connection = null;
     
-    try
-    {
-        $connexion = new PDO("mysql:host=; dbname=","", "")
+    public static function connect() {
+        if(self::$connection == null) {
+            try {
+              self::$connection = new PDO("mysql:host=" . self::$dbHost . ";dbname=" . self::$dbName , self::$dbUsername, self::$dbUserpassword);
+            }
+            catch(PDOException $e) {
+                die($e->getMessage());
+            }
+        }
+
+        return self::$connection;
     }
-    catch (PDOException $e)
-    {
-        die($e->getMessage());
+    
+    public static function disconnect() {
+        self::$connection = null;
     }
+}
+
 ?>

@@ -4,12 +4,12 @@
 
     $emailTo = "cassandra.sciauvaud@hotmail.fr";
 
-    if ($_SERVER["REQUEST_METHOD"] == POST)
+    if ($_SERVER["REQUEST_METHOD"] ==" POST")
     {
-        $array["email"] = verifyInput($_POST["email"]);
-        $array["prenom"] = verifyInput($_POST["prenom"]);
-        $array["nom"] = verifyInput($_POST["nom"]);
-        $array["message"] = verifyInput($_POST["message"]);
+        $array["email"] = test_input($_POST["email"]);
+        $array["prenom"] = test_input($_POST["prenom"]);
+        $array["nom"] = test_input($_POST["nom"]);
+        $array["message"] = test_input($_POST["message"]);
         $array["isSuccess"] = true;
         $emailText = "";
 
@@ -20,7 +20,7 @@
         }
         else
         {
-            $emailText = "Email: {$array["email"]}\n";  
+            $emailText .= "Email: {$array["email"]}\n";  
         }
 
         if(empty($array["prenom"]))
@@ -30,7 +30,7 @@
         }
         else
         {
-            $emailText = "Prénom: {$array["prenom"]}\n";  
+            $emailText .= "Prénom: {$array["prenom"]}\n";  
         }
 
         if(empty($array["nom"]))
@@ -40,7 +40,7 @@
         }
         else
         {
-            $emailText = "Nom: {$array["nom"]}\n";  
+            $emailText .= "Nom: {$array["nom"]}\n";  
         }
 
         if(empty($array["message"]))
@@ -50,7 +50,7 @@
         }
         else
         {
-            $emailText = "Message: {$array["message"]}\n";  
+            $emailText .= "Message: {$array["message"]}\n";  
         }
         if($array["isSucces"])
         {
@@ -64,9 +64,7 @@
     function isEmail($email) {
         return filter_var($email, FILTER_VALIDATE_EMAIL);
     }
-    function isPhone($phone) {
-        return preg_match("/^[0-9 ]*$/",$phone);
-    }
+    
     function test_input($data) {
       $data = trim($data);
       $data = stripslashes($data);
