@@ -43,8 +43,6 @@
             $emailText .= "Email: {$array['email']}\n";  
         }
 
-       
-
         if(empty($array["message"]))
         {
             $array["messageError"] = "Que voulez vous me dire ?";
