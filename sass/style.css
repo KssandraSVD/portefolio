@@ -1,17 +1,17 @@
-iframe {
-  position: fixed;
-  height: 60px;
-  width: 100%;
+.pFontSize {
+  font-size: 12px;
 }
 
 .presentation {
   background-image: url("/Images/ordinateur_entete.jpg");
-  background-size: cover;
+  background-size: 100% 100%;
   text-align: center;
   color: white;
 }
 
 .services {
+  box-shadow: 4px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
   background-color: #cfcec9;
   -webkit-animation-name: animArrivee;
           animation-name: animArrivee;
@@ -27,10 +27,6 @@ iframe {
 
 .realisation {
   background-color: #cfcec9;
-}
-
-.progress {
-  width: 40%;
 }
 
 body, html {
