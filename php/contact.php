@@ -3,6 +3,8 @@
     $array = array("prenom" => "", "nom" => "", "email" => "", "message" => "", "prenomError" => "", "nomError" => "", "emailError" => "", "messageError" => "", "isSucces" => false);
 
     $emailTo = "cassandra.sciauvaud@hotmail.fr";
+    $objet = "Un message de votre site";
+    $headers = "From: {$array['prenom']} {$array['nom']} <{$array['email']}>\r\nReply-To: {$array['email']}";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
@@ -55,8 +57,14 @@
 
         if($array["isSucces"])
         {
-            $headers = "From: {$array['prenom']} {$array['nom']} <{$array['email']}>\r\nReply-To: {$array['email']}";
-            mail($emailTo, "Un message de votre site", $emailText, $headers);
+            mail($emailTo, $objet, $emailText, $headers);
+        } 
+         
+        if (mail($emailTo, $objet, $emailText, $headers)) {
+            echo "Email envoyéavec succés";
+        } 
+        else {
+            echo "Echec de l'envoi de l'email";
         }
 
         echo json_encode($array);
