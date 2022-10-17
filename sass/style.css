@@ -2,6 +2,10 @@
   font-size: 12px;
 }
 
+.footer p {
+  font-size: small;
+}
+
 .presentation {
   background-image: url("../Images/presentation.jpg");
   background-size: 100% 100%;
@@ -32,14 +36,6 @@
 body, html {
   height: 100%;
   width: 100%;
-}
-
-.footer {
-  height: 100px;
-}
-
-.footer p {
-  font-size: small;
 }
 
 .bouton {
