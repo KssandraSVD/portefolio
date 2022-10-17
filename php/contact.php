@@ -1,83 +1,61 @@
-<?php 
+ <?php 
 
-    $array = array("prenom" => "", "nom" => "", "email" => "", "message" => "", "prenomError" => "", "nomError" => "", "emailError" => "", "messageError" => "", "isSucces" => false);
 
-    $emailTo = "cassandra.sciauvaud@hotmail.fr";
-    $objet = "Un message de votre site";
-    $headers = "From: {$array['prenom']} {$array['nom']} <{$array['email']}>\r\nReply-To: {$array['email']}";
+//Import PHPMailer class into the global namespace
+use PHPMailer\PHPMailer\PHPMailer;
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST")
-    {
-        $array["prenom"] = test_input($_POST["prenom"]);
-        $array["nom"] = test_input($_POST["nom"]);
-        $array["email"] = test_input($_POST["email"]);
-        $array["message"] = test_input($_POST["message"]);
-        $array["isSuccess"] = true;
-        $emailText = "";
+$msg = '';
 
-        if(empty($array["prenom"]))
-        {
-            $array["prenomError"] = "Je veux connaitre votre prénom";
-            $array["isSuccess"] = false;
-        }
-        else
-        {
-            $emailText .= "Prenom: {$array['prenom']}\n";  
-        }
+if (array_key_exists('email', $_POST)) {
+    date_default_timezone_set('Etc/UTC');
 
-        if(empty($array["nom"]))
-        {
-            $array["nomError"] = "Et oui, je veux même savoir votre nom";
-            $array["isSuccess"] = false;
-        }
-        else
-        {
-            $emailText .= "Nom: {$array['nom']}\n";  
-        }
+    require '../vendor/autoload.php';
 
-        if(!isEmail($array["email"]))
-        {
-            $array["emailError"] = "Oups, il y a un problème avec votre e-mail";
-            $array["isSuccess"] = false;
-        }
-        else
-        {
-            $emailText .= "Email: {$array['email']}\n";  
-        }
+    //Create a new PHPMailer instance
+    $mail = new PHPMailer();
+    //Send using SMTP to localhost (faster and safer than using mail()) – requires a local mail server
+    //See other examples for how to use a remote server such as gmail
+    $mail->isSMTP();
+    $mail->Host = 'smtp.hostinger.com';
+    $mail->Port = 465;
 
-        if(empty($array["message"]))
-        {
-            $array["messageError"] = "Que voulez vous me dire ?";
-            $array["isSuccess"] = false;
+    //Use a fixed address in your own domain as the from address
+    //**DO NOT** use the submitter's address here as it will be forgery
+    //and will cause your messages to fail SPF checks
+    $mail->setFrom('webmaster@cassandra-svd.fr');
+    //Choose who the message should be sent to
+    //You don't have to use a <select> like in this example, you can simply use a fixed address
+    //the important thing is *not* to trust an email address submitted from the form directly,
+    //as an attacker can substitute their own and try to use your form to send spam
+    $mail->addAddress('cassandra.sciauvaud@hotmail.fr');
+    //Put the submitter's address in a reply-to header
+    //This will fail if the address provided is invalid,
+    //in which case we should ignore the whole request
+    if ($mail->addReplyTo($_POST['email'], $_POST['nom'], $_POST['prenom'])) {
+        $mail->Subject = 'PHPMailer contact form';
+        //Keep it simple - don't use HTML
+        $mail->isHTML(false);
+        //Build a simple message body
+        $mail->Body = <<<EOT
+            Email: {$_POST['email']}
+            Name: {$_POST['nom']}
+            Prenom: {$_POST['prenom']}
+            Message: {$_POST['message']}
+            EOT;
+        //Send the message, check for errors
+        if (!$mail->send()) {
+            //The reason for failing to send will be in $mail->ErrorInfo
+            //but it's unsafe to display errors directly to users - process the error, log it on your server.
+            $msg = 'Sorry, something went wrong. Please try again later.';
+        } else {
+            $msg = 'Message sent! Thanks for contacting us.';
         }
-        else
-        {
-            $emailText .= "Message: {$array['message']}\n";  
-        }
-
-        if($array["isSucces"])
-        {
-            mail($emailTo, $objet, $emailText, $headers);
-        } 
-         
-        if (mail($emailTo, $objet, $emailText, $headers)) {
-            echo "Email envoyéavec succés";
-        } 
-        else {
-            echo "Echec de l'envoi de l'email";
-        }
-
-        echo json_encode($array);
+    } else {
+        $msg = 'Invalid email address, message ignored.';
     }
+}
+  
+   
+?> 
 
-    function isEmail($email) {
-        return filter_var($email, FILTER_VALIDATE_EMAIL);
-    }
-    
-    function test_input($data) {
-      $data = trim($data);
-      $data = stripslashes($data);
-      $data = htmlspecialchars($data);
-      return $data;
-    }
-?>
+

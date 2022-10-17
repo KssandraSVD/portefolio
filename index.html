@@ -20,8 +20,7 @@
   gtag('config', 'G-H9W0PK9GSS');
 </script>
 
-    <!--LIEN JQUERY-->
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    
 
     <!--LIEN BOOSTRAP-->
 
@@ -33,8 +32,7 @@
     <!--LIEN FONT AWESOME-->
     <script src="https://kit.fontawesome.com/cb7db76cf2.js" crossorigin="anonymous"></script>
 
-    <!--LIEN JAVASCRIPT-->
-    <script src="./js/script.js"></script>
+
 
    
 
@@ -150,29 +148,25 @@
       </div>
 
       <div class="col m-5">
-        <form id="contact-form" method="post" action="" role="form">
+        <form method="post" action="php/contact.php" role="form">
           <div class="form-group">
             <label for="email">Email</label>
             <input type="email" name="email" class="form-control" id="email"  placeholder="Adresse email">
-            <p class="comments"></p>
           </div>
 
           <div class="form-group col-lg-5">
             <label for="nom">Nom</label>
             <input type="text" name="nom" class="form-control" id="nom" placeholder="nom">
-            <p class="comments"></p>
           </div>
 
           <div class="form-group col-lg-5">
             <label for="prenom">Prénom</label>
             <input type="text" name="prenom" class="form-control" id="prenom" placeholder="prénom">
-            <p class="comments"></p>
           </div>
 
           <div class="form-group">
             <label for="textarea">Message</label>
             <input type="textarea" name="message" class="form-control" id="message" placeholder="message">
-            <p class="comments"></p>
           </div>
 
           <button type="submit" class="btn bouton mt-3" value="envoyer">Soumettre</button>
