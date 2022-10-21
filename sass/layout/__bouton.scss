@@ -1,17 +1,8 @@
 .bouton {
-    background-color: $vert;
+    background-color: $vertClair;
 
     &:hover {
-        background-color: $vert;
-        opacity: 0.50;
+        background-color: $vertClair;
+        opacity: 0.80;
     }
-}
-
-.bouton1 {
-    height: 40px;
-
-    &:hover {
-       background-color: white;
-    }
-    
 }

@@ -1,15 +1,23 @@
+
 .presentation {
-    
-    background-image: url("../Images/presentation.jpg");
+    background: url(/portefolio/Images/presentation1.png);
+    height: 100%;
+    padding-top: 600px;
     background-size: 100% 100%;
-    text-align: center;
-    color: white;
+    background-attachment: fixed;
+     
+}
+
+.textPresentation {
+    position: absolute;
+    top: 50%;
+    // left:10%;
 }
 
 .services{
     box-shadow: 4px 2px 2px 1px rgba(0, 0, 0, 0.2) ;
     border-radius: 10px;
-    background-color: #cfcec9;
+    background-color: #d1a431;
     animation-name: animArrivee;
     animation-timing-function: ease;
     animation-iteration-count: 1;
@@ -18,7 +26,7 @@
 }
 
 .realisation{
-    background-color:  #cfcec9;
+    background-color: rgba(207, 206, 201, 0.4);
 }
 
 

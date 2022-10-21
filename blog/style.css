@@ -1,0 +1,32 @@
+body, html, .container-fluid {
+    padding: 0;
+    margin: 0;
+    background-image: url(./img/bg_bois.jpg);
+}
+
+header {
+    background-color: #8e806d;
+    color: white;
+    padding: 10px;
+}
+
+h2 {
+    color:#8e806d; 
+}
+
+.card {
+    background-color: #cfcec9;
+}
+
+#contact-form1 {
+    background-color: #8e806d;
+    border-radius: 5px;
+}
+
+.commentaires {
+    background-color: #8dbbb2;
+    border-radius: 20px;
+    padding: 10px;
+    float: left;
+    margin-left: 10px;
+}

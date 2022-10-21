@@ -1,6 +1,4 @@
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,34 +18,29 @@
   gtag('config', 'G-H9W0PK9GSS');
 </script>
 
-    
-
     <!--LIEN BOOSTRAP-->
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
     <!--LIEN CSS-->
     <link rel="stylesheet" type="text/css" href="./sass/style.css">
 
     <!--LIEN FONT AWESOME-->
-    <script src="https://kit.fontawesome.com/cb7db76cf2.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/cb7db76cf2.js" crossorigin="anonymous"></script> 
 
-
-
-   
-
-   
+    <!--LIEN JS-->
+    <script src="./js/script.js"></script>
 </head>
 
  <!--nav bar-->
 
 <body>
-
+  <div class="container-fluid"></div>
  
    <!-- BARRE DE NAVIGATION-->
-   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+   <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a href="#" class="navbar-brand">Sciauvaud Cassandra</a>
+      <a class="navbar-brand" href="#"><i class="bi bi-code"></i>Kssandra<i class="bi bi-code-slash"></i></a>
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -55,6 +48,7 @@
             <div class="navbar-nav">
                 <a href="index.html" class="nav-item nav-link active">Accueil</a>
                 <a href="#realisations" class="nav-item nav-link">Réalisations</a>
+                <a href="/blog/blog.php" class="nav-item nav-link">Blog</a>
                 <a href="#contact" class="nav-item nav-link">Contact</a>
             </div>
         </div>
@@ -62,54 +56,92 @@
 </nav>
 
     
-    <div class="container">
+    
 
             <!--PRESENTATION-->
-          <div class="row presentation d-flex">
-            
-              <div class="col text-center mt-5 mb-5">    
-                  <p>Développeuse Web <strong>passionée et amoureuse </strong>du code,<br>
-                Je vous propose aujourd'hui mes services afin que l'on crée ensemble <strong>le site web de vos rêves</strong> </p>
-              </div>
-              <div class="col-12 mb-3">
-               <a href="#contact-form"> <button class="btn bouton bouton1"  role="button">Devis gratuit</button></a>
-              </div>
-          </div>  
-
+          <div class="presentation"></div> 
           
+          <div class="rox d-flex justify-content-center mt-5">
+            <a href="tel:+33785800120"> <button class="btn bouton"  role="button">Appeler</button></a> 
+          </div>
 
+          <!--tableau-->
+          <h2 class="fs-5 m-5 text-center"><strong>Transformons vos idées et envies de création de site web en projets</strong></h2>
+        <div class="container mb-5">     
+           <div class="tableau m-auto">
+                <h5>Pourquoi avoir un site internet ?  <a onclick="show('open1');"><i class="fa-solid fa-plus icons"></i></a></h5>
+                <div class="section" id="open1">
+                    <p>Un site web vous permet:</p>
+                    <ul>
+                        <li>Présenter vos activités, vos produits et services</li>
+                        <li>Valoriser vos produits et/ou vos prestations, en ajoutant des photos, des descriptifs</li>
+                        <li>Créer un lien direct avec vos clients, de sonder leurs opinions</li>
+                        <li>Maintenir et développer votre chiffre d’affaires</li>
+                        <li>Vendre vos produits et services en ligne</li>
+                        <li>Augmenter votre notoriété </li>
+                        <li>Informer vos clients et prospects </li>
+                    </ul>
+                </div>
+            </div> 
+            
+            <div class="tableau m-auto">
+                <h5>Comment augmenter le trafic de votre site ?  <a onclick="show('open2');"><i class="fa-solid fa-plus icons"></i></a></h5>
+                <div class="section" id="open2">
+                    <ul>
+                        <li>Optimiser votre SEO</li>
+                        <li>Vérifiez l’aspect technique de votre site web</li>
+                        <li>Créez des liens externes avec des sites affiliés</li>
+                        <li>Investissez les réseaux sociaux</li>
+                        <li>Faites revenir vos cibles encore froides</li>
+                    </ul>
+                </div>
+            </div>
 
+            <div class="tableau m-auto">
+                <h5>Pourquoi faire ou refaire votre site ?  <a onclick="show('open3');"><i class="fa-solid fa-plus icons"></i></a></h5>
+                <div class="section" id="open3">
+                    <ul>
+                        <li>Pour qu’il réponde aux critères actuels du web : responsive, rétina</li>
+                        <li>C’est une occasion pour rajeunir voire refaire votre identité visuelle de votre entreprise.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tableau m-auto">
+                <h5>Quel budget pour la creation de votre site ?  <a onclick="show('open4');"><i class="fa-solid fa-plus icons"></i></a></h5>
+                <div class="section" id="open4">
+                    <p>Il est important de connaître votre budget, avant de commencer les démarches auprès d’une agence web.<br>Sachant qu’avant de pouvoir vous établir une proposition commerciale ou un devis, l’agence web doit analyser votre besoin et établir avec vous un projet de cahier des charges, il sera un guide dans la phase de création et le garant d’un site Internet conforme à vos attentes et objectfs.</p>
+                </div>
+            </div>
+        </div>
 
             <!--services-->
-    <div class="row">          
-            <h2 class="fs-5 mt-3 mb-3">Transformons vos idées et envies en projets</h2>
+          <div class="row">  
+            <div class="col services m-3 p-2">
+              <h3 class="fs-6">Création Site Web <img src="./Images/gif1.gif"/></h3>
+              <p class="pFontSize">Création de site internet avec ou sans CMS.</p>
+            </div>
             
+            <div class="col services m-3 p-2">
+              <h3 class="fs-6 ">Refonte Site Web <img src="./Images/gif2.gif"/></h3>
+              <p class="pFontSize">Je vous accompagne pour la migration ou la refonte de votre site internet.</p>
+            </div>
 
-      <div class="col services m-3 p-2">
-        <h3 class="fs-6">Création Site Web</h3>
-        <p class="pFontSize">Création de site internet avec ou sans CMS.</p>
-      </div>
-      
-      <div class="col services m-3 p-2">
-        <h3 class="fs-6 ">Refonte Site Web</h3>
-        <p class="pFontSize">Je vous accompagne pour la migration ou la refonte de votre site internet.</p>
-      </div>
+            <div class="col services m-3 p-2">
+              <h3 class="fs-6">100 % Responsive <img src="./Images/gif3.gif"/></h3>
+              <p class="pFontSize">Tous les sites sont optimisés pour les différentes plateformes (smartphone, tablettes, ordinateurs ...)</p>
+            </div>
 
-      <div class="col services m-3 p-2">
-        <h3 class="fs-6">100 % Responsive</h3>
-        <p class="pFontSize">Tous les sites sont optimisés pour les différentes plateformes (smartphone, tablettes, ordinateurs ...)</p>
-      </div>
-
-      <div class="col services m-3 p-2">
-        <h3 class="fs-6">Maintenance Site Web</h3>
-        <p class="pFontSize">Amélioration, maintenance du site.</p>
-      </div>
-            
-    </div>
-    
-    <div class="col-12 text-center mt-5">
-      <a href="#contact-form"><button class="btn bouton bouton1" href="#" role="button">Echanger sur mon projet</button></a>
-    </div>
+            <div class="col services m-3 p-2">
+              <h3 class="fs-6">Maintenance Site Web <img src="./Images/gif4.gif"/></h3>
+              <p class="pFontSize">Amélioration, maintenance du site.</p>
+            </div>
+                  
+          </div>
+          
+          <div class="col-12 text-center mt-5">
+            <a href="#contact-form"><button class="btn bouton" href="#" role="button">Echanger sur mon projet</button></a>
+          </div>
 
 
     <!--réalisations-->
@@ -123,7 +155,7 @@
         <img class="card-img-top p-2" src="./Images/realisations_snack.jpg" alt="Card image">
         <div class="card-body">
           <h4 class="card-title fs-5 ">Snack La Galinette</h4>
-          <a href="#" class="btn" style="background-color: #bbb14e ;">Voir le site</a>
+          <a href="https://snack-galinette.fr/" class="btn bouton">Voir le site</a>
         </div>
       </div>
 
@@ -140,7 +172,7 @@
     <!--CONTACT-->
 
             
-    <div class="row mb-5" id="contact">
+    <div class="row mb-5" id="contact-form">
         <h2 class="mb-5 mt-5 text-center fs-5">Vous avez un projet en tête ?</h2>
 
       <div class="col-10 m-auto col-lg-5 mb-lg-5">
@@ -183,10 +215,10 @@
             <a href="tel:+33785800120" class="btn bouton mb-3">07.85.80.01.20</a>
           </div>
 
-          <p class="text-center">Création de site web à Montauroux</p>
+          <p class="text-center">Création de site web à Montauroux<br>Site web fait avec &#x1F9E1;</p>
         </div>
       </footer>
-     
+    </div> 
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>   
