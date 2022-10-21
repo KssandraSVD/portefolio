@@ -1,18 +1,12 @@
 
 .presentation {
-    background: url(/portefolio/Images/presentation1.png);
-    height: 100%;
-    padding-top: 600px;
-    background-size: 100% 100%;
+    background: url(/portefolio/Images/img1.png);
+    padding-top: 400px;
+    background-size: 100% 350px;
     background-attachment: fixed;
-     
+    background-repeat: no-repeat;
 }
 
-.textPresentation {
-    position: absolute;
-    top: 50%;
-    // left:10%;
-}
 
 .services{
     box-shadow: 4px 2px 2px 1px rgba(0, 0, 0, 0.2) ;
