@@ -1,12 +1,8 @@
-
-.presentation {
-    background: url(/portefolio/Images/img1.png);
-    padding-top: 400px;
-    background-size: 100% 350px;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+#video {
+    width: 100%;
+    object-fit: contain;
+    // height: 400px;
 }
-
 
 .services{
     box-shadow: 4px 2px 2px 1px rgba(0, 0, 0, 0.2) ;
