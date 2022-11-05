@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
 .pFontSize {
   font-size: 12px;
 }
@@ -6,10 +7,9 @@
   font-size: small;
 }
 
-#video {
-  width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+h2 {
+  font-family: "Parisienne", cursive;
+  font-size: 40px;
 }
 
 .services {
@@ -75,9 +75,10 @@ body, html {
   }
 }
 .tableau {
-  border: 5px thick double gray;
   box-shadow: 4px 2px 2px 1px rgba(0, 0, 0, 0.2);
   width: 60%;
+  border-left: 1px solid #d1a431;
+  border-top: 1px solid #d1a431;
 }
 
 .section {
@@ -91,4 +92,27 @@ h5 {
 
 .icons {
   color: #d1a431;
+}
+
+@media only screen and (max-width: 800px) {
+  #video {
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    height: 300px;
+  }
+  #presentation2 {
+    display: none;
+  }
+}
+@media screen and (min-width: 800px) {
+  .presentation1 {
+    display: none;
+  }
+  .presentation2 {
+    background-image: url(/portefolio/Images/presentation.png);
+    background-size: 100% 100%;
+    padding-top: 700px;
+    margin-bottom: 30px;
+  }
 }/*# sourceMappingURL=style.css.map */

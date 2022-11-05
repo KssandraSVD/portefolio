@@ -38,37 +38,45 @@
   <div class="container-fluid"></div>
  
    <!-- BARRE DE NAVIGATION-->
-   <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light navBar">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><i class="bi bi-code"></i>Kssandra<i class="bi bi-code-slash"></i></a>
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav">
-                <a href="index.html" class="nav-item nav-link active">Accueil</a>
-                <a href="#realisations" class="nav-item nav-link">Réalisations</a>
-                <a href="/blog/blog.php" class="nav-item nav-link">Blog</a>
-                <a href="#contact" class="nav-item nav-link">Contact</a>
-            </div>
-        </div>
-    </div>
-</nav>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light navBar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><i class="bi bi-code"></i>Kssandra<i class="bi bi-code-slash"></i></a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+              <div class="navbar-nav">
+                  <a href="index.html" class="nav-item nav-link active">Accueil</a>
+                  <a href="#realisations" class="nav-item nav-link">Réalisations</a>
+                  <a href="/blog/blog.php" class="nav-item nav-link">Blog</a>
+                  <a href="#contact" class="nav-item nav-link">Contact</a>
+              </div>
+          </div>
+      </div>
+    </nav>
 
     
     
 
             <!--PRESENTATION-->
-          <div class="presentation"></div> 
-          <video id="video" autoplay loop muted>
-            <source src="./Images/video.mp4" type="video/mp4">
-          </video>
-          <div class="d-flex justify-content-center mt-5">
+
+          <!--small screen-->  
+          <div class="presentation1">
+            <video id="video" autoplay loop muted>
+              <source src="./Images/video.mp4" type="video/mp4">
+            </video>
+          </div>
+          
+          <!--big screen-->
+          <div class="row presentation2"></div>
+
+
+          <div class="d-flex justify-content-center">
             <a href="tel:+33785800120"> <button class="btn bouton"  role="button">Appeler</button></a> 
           </div>
 
           <!--tableau-->
-          <h2 class="fs-5 m-5 text-center"><strong>Transformons vos idées et envies de création de site web en projets</strong></h2>
+          <h2 class="m-5 text-center">Transformons vos idées et envies de création de site web en projets</h2>
         <div class="container mb-5">     
            <div class="tableau m-auto">
                 <h5>Pourquoi avoir un site internet ?  <a onclick="show('open1');"><i class="fa-solid fa-plus icons"></i></a></h5>
@@ -151,23 +159,23 @@
     
 
     <div class="row  realisation mt-5" id="realisations">
-      <h2 class="mt-5 mb-5 fs-5 text-center">Réalisation</h2>
+      <h2 class="mt-5 mb-5 text-center">Réalisations</h2>
      
       <div class="card m-4 col-10 col-lg-4">
         <img class="card-img-top p-2" src="./Images/realisations_snack.jpg" alt="Card image">
         <div class="card-body">
-          <h4 class="card-title fs-5 ">Snack La Galinette</h4>
+          <h4 class="card-title fs-5 p-2">Création d'un site web pour le snack "La Galinette" à St Paul en fôret</h4>
           <a href="https://snack-galinette.fr/" class="btn bouton">Voir le site</a>
         </div>
       </div>
 
-      <!-- <div class="card m-4 col-10 col-lg-4" >
-        <img class="card-img-top p-2" src="/Images/realisations_jeux_videos.jpg" alt="Card image">
+      <div class="card m-4 col-10 col-lg-4" >
+        <img class="card-img-top p-2" src="./Images/facade1.png" alt="Card image">
         <div class="card-body">
-          <h4 class="card-title fs-5">Communauté Team Passion</h4>
-          <a href="#" class="btn"style="background-color: #bbb14e ;">Voir le site</a>
+          <h4 class="card-title fs-5 p-2">Création d'un site web pour la location d'une villa à Fayence</h4>
+          <a href="http://villa-bellevue.online/" class="btn bouton">Voir le site</a>
         </div>
-      </div> -->
+      </div>
 
     </div>
 
@@ -175,7 +183,7 @@
 
             
     <div class="row mb-5" id="contact-form">
-        <h2 class="mb-5 mt-5 text-center fs-5">Vous avez un projet en tête ?</h2>
+        <h2 class="mb-5 mt-5 text-center">Vous avez un projet en tête ?</h2>
 
       <div class="col-10 m-auto col-lg-5 mb-lg-5">
         <img class="img-fluid" src="./Images/coffee.jpg">

@@ -6,6 +6,8 @@ $violet : #da658a;
 $vertClair : #8dbbb2;
 $marron : #8e806d; 
 
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
 
 .pFontSize {
 
@@ -15,5 +17,10 @@ $marron : #8e806d;
 .footer p {
 
     font-size: small;
+}
+
+h2 {
+    font-family: 'Parisienne', cursive;
+    font-size: 40px;
 }
 
